@@ -10,7 +10,7 @@
     version 1.0.0
   </p>
   <br/>
-  <p>·
+  <p>
     <a href="#status"><strong>Status</strong></a> ·
     <a href="#description"><strong>Description</strong></a> ·
     <a href="#usage"><strong>Usage</strong></a> ·
