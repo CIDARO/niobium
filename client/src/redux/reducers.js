@@ -24,9 +24,23 @@ function loadingReducer(state = {}, action) {
     }
 }
 
+function contractReducer(state = {}, action) {
+    switch (action.type) {
+        case 'CONTRACT_LOADED': 
+            const { contract } = action;
+            return { ...state, contract };
+        case 'VALUE_LOADED':
+            const { value } = action;
+            return { ...state, value };
+        default:
+            return state;
+    }
+}
+
 const rootReducer = new combineReducers({
     web3Reducer,
-    loadingReducer
+    loadingReducer,
+    contractReducer
 })
 
 export default rootReducer;

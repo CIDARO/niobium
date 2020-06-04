@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { loadWeb3, loadAccount, toggleLoading } from "./redux/interactions";
+import { loadWeb3, loadAccount, toggleLoading, loadContract, loadStoredData } from "./redux/interactions";
 import { web3Selector, accountSelector, loadingSelector } from "./redux/selectors";
 import { subscribeToAccountsChanging } from "./redux/subscriptions";
 
@@ -13,6 +13,8 @@ class App extends Component {
     await toggleLoading(dispatch, true);
     const web3 = await loadWeb3(dispatch);
     await loadAccount(dispatch, web3);
+    const contract = await loadContract(dispatch, web3);
+    await loadStoredData(dispatch, contract);
     subscribeToAccountsChanging(dispatch, web3);
     await toggleLoading(dispatch, false);
   };
@@ -32,7 +34,9 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
+    contract: contractSelector(state),
     account: accountSelector(state),
+    value: valueSelector(state),
     loading: loadingSelector(state),
   }
 }
