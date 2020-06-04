@@ -7,7 +7,7 @@
     Niobium is an Open Source Truffle Box that comes with Redux and Tailwind CSS.
   </p>
   <p>
-    version 1.0.0
+    version 1.0.0-beta
   </p>
   <br/>
   <p>
@@ -22,7 +22,7 @@
 
 ## Status
 
-**Niobium** is currently in **alpha** stage.
+**Niobium** is currently in version **1.0.0-beta**.
 
 ---
 
