@@ -11,7 +11,7 @@ const loading = state => get(loading, 'loadingReducer.loading', null);
 export const loadingSelector = createSelector(loading, l => l);
 
 const contract = state => get(state, 'contractReducer.contract', null);
-export const contractSeletor = createSelector(contract, contr => contr);
+export const contractSelector = createSelector(contract, contr => contr);
 
 const value = state => get(state, 'contractReducer.value', null);
 export const valueSelector = createSelector(value, a => a);
