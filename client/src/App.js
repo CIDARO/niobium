@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { loadWeb3, loadAccount, toggleLoading, loadContract, loadStoredData } from "./redux/interactions";
-import { web3Selector, accountSelector, loadingSelector } from "./redux/selectors";
+import { web3Selector, accountSelector, loadingSelector, contractSelector, valueSelector } from "./redux/selectors";
 import { subscribeToAccountsChanging } from "./redux/subscriptions";
 
 import "./App.css";
