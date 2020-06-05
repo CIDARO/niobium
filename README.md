@@ -68,7 +68,7 @@ You can use this boilerplate also with Truffle that will install all the necessa
 # if you have truffle installed locally
 npx truffle unbox CIDARO/niobium
 # if you have truffle installed globally
-truffle unbox CIDARO/niobiu,
+truffle unbox CIDARO/niobium
 ```
 
 ### Post install commands
